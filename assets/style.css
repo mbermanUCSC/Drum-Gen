@@ -1,0 +1,332 @@
+
+
+/* Background + Basics */
+body {
+    background-color: #3e6249;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    color: #e7e571;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #00000063;
+}
+
+
+/* Main Text + Title */
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #3519360a;
+    border-radius: 10px;
+    background-color: #472b444b;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 5px #0000003b;
+}
+
+.display h2 {
+    font-family: 'VT323', monospace;
+    color: #e7e571;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.display p {
+    font-family: 'VT323', monospace;
+    color: #e7e571;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.display a {
+    font-family: 'VT323', monospace;
+    color: #53f17d;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+
+/* Playback, BPM, Gain, etc. */
+.playback-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #723a7aa6;
+    border: 3px solid #757d65;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px #000000cc;
+    /* keep content on screen */
+    overflow: hidden;
+}
+
+/* playback button */
+.playback-controls button {
+    background-color: #989898;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    /* fixed size */
+    width: 68px;
+    height: 68px;
+}
+
+/* playback button hover */
+.playback-controls button:hover {
+    background-color: #6a6a6a;
+    scale: 1.02;
+}
+
+/* number field */
+.playback-controls input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    background-color: #b5b385;
+
+    font-family: 'VT323', monospace;
+    box-shadow: 0 0 10px 5px #0000003b;
+    width: 100px;
+    
+}
+
+/* checkbox */
+.playback-controls input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 0 0 10px 5px #0000003b;
+    /* extra stylin */
+    margin-left: 10%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.playback-controls p{
+    font-size: 20px;
+    margin: 5px;
+    font-family: 'VT323', monospace;
+    color: black;
+}
+
+
+/* time signature */
+/* .playback-controls select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    background-color: #bdbdbd;
+} */
+
+/* Volume */
+.volume-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #723a7aa6;
+    border: 3px solid #757d65;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px #000000cc;
+    /* keep content on screen */
+    overflow: hidden;
+}
+
+.volume-controls p{
+    font-size: 20px;
+    margin: 5px;
+    font-family: 'VT323', monospace;
+    color: black;
+}
+
+
+.slider{
+    -webkit-appearance: none;
+    width: 30%;
+    height: 45px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;  
+    transition: opacity .2s;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 0 0 10px 5px #0000003b;
+}
+
+/* Icons */
+.nav-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.nav-bar img{
+    width: 60px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 5px #0000003b;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+.page-button:hover {
+    background-color: #ab8119;
+    scale: 1.12;
+}
+
+
+
+/* Sequencer */
+.sequencer {
+    background-color: #736023a6;
+    border: 3px solid #4f3737;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px #000000;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 90%;
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.drum-control {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+/* drum button */
+.drum-control button {
+    background-color: #989898;
+    color: #494237;
+    border: none;
+    padding: 2px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'VT323', monospace;
+}
+
+/* drum button hover */
+.drum-control button:hover {
+    background-color: #6a6a6a;
+    scale: 1.12;
+}
+
+.drum-control p {
+    font-size: 16px;
+    font-family: 'VT323', monospace;
+    color: black;
+}
+
+
+
+/* kit select */
+.sequencer select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    background-color: #b5b385;
+    font-family: 'VT323', monospace;
+    box-shadow: 0 0 10px 5px #0000003b;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    color : black;
+
+
+}
+
+/* sequence */
+.sequence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: #aa903aa6;
+    border: 3px solid #4f3737;
+    border-radius: 5px;
+    padding: 5px;
+    height: 90px;
+    box-shadow: 0 0 10px 5px #00000090;
+    /* keep content on screen */
+    max-width: 100%;
+}
+
+/* Main Drum Buttons */
+.sequence button {
+    flex: 1;
+    height: 60%;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #989898e2;
+}
+
+
+.sequence .button-active {
+    background-color: #4CAF50; /* Green background to indicate active/pressed */
+}
+
+.current-beat {
+    border: 2px solid #FFD700; /* Gold border */
+    box-shadow: 0 0 10px 5px #857517b0; /* Gold shadow */
+}
+
+/* seed input */
+.seed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: #aa903aa6;
+    border: 3px solid #4f3737;
+    border-radius: 5px;
+    padding: 5px;
+    height: 40px;
+    width: 400px;
+    box-shadow: 0 0 10px 5px #00000090;
+    /* keep content on screen */
+    max-width: 100%;
+}

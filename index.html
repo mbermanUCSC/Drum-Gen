@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Pocket Drums</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+
+    <h1>Pocket Drums</h1>
+    <section class="display">
+        <p>Drum Sequence Generator</p>
+    <section class = "display">
+        <!--section for playback controls-->
+        <section class="playback-controls">
+            <button class="button" id="play">▶</button>
+            <button class="reset" id="reset">🗑️</button>
+            <!-- bpm number field -->
+            <input type="checkbox" id="bpm-lock">
+            <p>🔒</p>
+            <input type="number" id="bpm" value="120" min="30" max="240">
+            <p>BPM</p>
+            
+        </section>
+
+        <section class="playback-controls">
+            <input class="slider" type="range" id="swing" value="0" min="0" max="60">
+            <p>Swing</p>
+            <input type="checkbox" id="division">
+            <p>16th notes</p>
+            
+        </section>
+
+        <section class="playback-controls">
+            <!-- seed input -->
+            <input class="seed" id="seed" value="0" min="0" max="100000000">
+            <p>Seed</p>
+            <button class="shuffle" id="shuffle">🔀</button>
+        </section>
+    </section>
+    
+    <!-- grid of 8 sequence buttons (2 bars) -->
+    <section class="sequencer">
+        
+        <h2>Sequencer</h2>
+        <!-- dropdown for kit presets -->
+        <select id="kit-select">
+            <option value="default">Retro 1</option>
+            <option value="retro2">Retro 2</option>
+            <option value="retro3">Dirty 1</option>
+            <option value="jazz1">Clean 1</option>
+        </select>
+        <div class="drum-control">
+            <p>Kick</p>
+            <button class="add-sample-button kick">file</button>
+        </div>
+        <section class="sequence" data-sound="kick">
+            <button class="kick" id="button-0"></button>
+            <button class="kick" id="button-1"></button>
+            <button class="kick" id="button-2"></button>
+            <button class="kick" id="button-3"></button>
+            <button class="kick" id="button-4"></button>
+            <button class="kick" id="button-5"></button>
+            <button class="kick" id="button-6"></button>
+            <button class="kick" id="button-7"></button>
+        </section>
+        <div class="drum-control">
+            <p>Snare</p>
+            <button class="add-sample-button snare">file</button>
+        </div>
+        <section class="sequence" data-sound="snare">
+            <button class="snare" id="button-0"></button>
+            <button class="snare" id="button-1"></button>
+            <button class="snare" id="button-2"></button>
+            <button class="snare" id="button-3"></button>
+            <button class="snare" id="button-4"></button>
+            <button class="snare" id="button-5"></button>
+            <button class="snare" id="button-6"></button>
+            <button class="snare" id="button-7"></button>
+        </section>
+        <div class="drum-control">
+            <p>Hi-Hat</p>
+            <button class="add-sample-button hihat">file</button>
+        </div>
+        <section class="sequence" data-sound="hihat">
+            <button class="hihat" id="button-0"></button>
+            <button class="hihat" id="button-1"></button>
+            <button class="hihat" id="button-2"></button>
+            <button class="hihat" id="button-3"></button>
+            <button class="hihat" id="button-4"></button>
+            <button class="hihat" id="button-5"></button>
+            <button class="hihat" id="button-6"></button>
+            <button class="hihat" id="button-7"></button>
+        </section>
+        <div class="drum-control">
+            <p>Tom</p>
+            <button class="add-sample-button tom">file</button>
+        </div>
+        <section class="sequence"  data-sound="tom">
+            <button class="tom" id="button-0"></button>
+            <button class="tom" id="button-1"></button>
+            <button class="tom" id="button-2"></button>
+            <button class="tom" id="button-3"></button>
+            <button class="tom" id="button-4"></button>
+            <button class="tom" id="button-5"></button>
+            <button class="tom" id="button-6"></button>
+            <button class="tom" id="button-7"></button>
+        </section>
+    </section>
+
+    <section class="volume-controls">
+        <!-- volume slider for each sound -->
+        <p>Main&nbsp;&nbsp;</p>
+        <input class="slider" type="range" id="master" value="80" min="0" max="80">
+    </section>
+    <section class="volume-controls">
+        <p>Drums&nbsp;</p>
+        <input class="slider" type="range" id="drums" value="80" min="0" max="80">
+    </section>
+
+
+    <section class="display">
+        <p>Created using the Web Audio API</p>
+        <p>-Miles Berman</p>
+    </section>
+        
+
+
+    <!-- get js  -->
+    <script type="module" src="assets/sequencer.js"></script>
+
+</body>
+</html>
+
+
